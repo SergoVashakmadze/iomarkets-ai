@@ -1,0 +1,77 @@
+# IoMarkets AI - robots.txt
+# https://iomarkets.ai
+
+User-agent: *
+Allow: /
+
+# Block common spam and attack patterns
+Disallow: /*.shtml$
+Disallow: /*.shtml
+Disallow: /*?*
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/
+Disallow: /cgi-bin/
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+Disallow: /*.php$
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /cdn-cgi/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.map$
+
+# Block common SEO spam injection patterns
+Disallow: /*casino*
+Disallow: /*poker*
+Disallow: /*viagra*
+Disallow: /*cialis*
+Disallow: /*pharmacy*
+Disallow: /*payday*
+Disallow: /*loan*
+Disallow: /*insurance*
+Disallow: /*mortgage*
+Disallow: /*attorney*
+Disallow: /*lawyer*
+Disallow: /*hosting*
+Disallow: /*seo*
+Disallow: /*cheap*
+Disallow: /*buy*
+Disallow: /*sale*
+Disallow: /*discount*
+Disallow: /*free*
+Disallow: /*click*
+Disallow: /*track*
+Disallow: /*redirect*
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: SearchmetricsBot
+Disallow: /
+
+# Allow homepage explicitly
+Allow: /$
+
+# Sitemap
+Sitemap: https://iomarkets.ai/sitemap.xml
