@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Brain, Zap, BarChart3, Shield, TrendingUp, Users, ArrowRight } from 'lucide-react';
-import TradingViewChart from '../components/TradingViewChart';
 
 const IoMarketsAI: React.FC = () => {
   return (
@@ -52,7 +51,7 @@ const IoMarketsAI: React.FC = () => {
           </div>
           <div className="max-w-6xl mx-auto">
             <div style={{ height: "500px", width: "100%" }}>
-              <TradingViewChart height={500} symbol="NASDAQ:AAPL" />
+              <div className="h-[500px] bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">Trading Chart Coming Soon</div>
             </div>
           </div>
         </div>
