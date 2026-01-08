@@ -1,3 +1,380 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ========================================
+   IoMarkets.ai Premium Theme
+   AI/Purple Theme with Modern Effects
+   ======================================== */
+
+/* CSS Variables - AI PURPLE/VIOLET */
+:root {
+  /* Brand Colors - AI Purple Theme */
+  --violet: #8B5CF6;
+  --violet-light: #A78BFA;
+  --violet-dark: #7C3AED;
+  --purple: #9333EA;
+  --purple-light: #A855F7;
+  --fuchsia: #D946EF;
+
+  /* Navy/Dark Theme */
+  --navy-950: #0a0a14;
+  --navy-900: #0d0d1a;
+  --navy-800: #121226;
+  --navy-700: #1a1a33;
+  --navy-600: #252540;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  /* Glass effect for .ai - purple tint */
+  .glass {
+    background: rgba(19, 18, 34, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+  }
+
+  .glass-violet {
+    background: rgba(139, 92, 246, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    box-shadow: 0 4px 30px rgba(139, 92, 246, 0.1);
+  }
+}
+
+/* ========================================
+   HERO BACKGROUND EFFECTS
+   ======================================== */
+
+/* Hero gradient - deep navy with purple undertones */
+.hero-gradient-bg {
+  background: linear-gradient(
+    135deg,
+    #070714 0%,
+    #0c0c20 20%,
+    #0f0f2a 40%,
+    #13132e 60%,
+    #0f0f29 80%,
+    #0a0a1a 100%
+  );
+}
+
+/* Elegant grid pattern */
+.elegant-grid {
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Diamond pattern overlay */
+.diamond-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 30 L30 55 L5 30 Z' fill='none' stroke='rgba(139,92,246,0.06)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+/* Hero orb effect - multi-color dynamic */
+.orb-hero {
+  opacity: 0.12;
+  filter: blur(120px);
+  border-radius: 50%;
+  animation: orb-hero-pulse 10s ease-in-out infinite;
+}
+
+@keyframes orb-hero-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.18;
+  }
+}
+
+/* ========================================
+   FLOATING ELEMENTS ANIMATIONS
+   ======================================== */
+
+/* Floating animation - slow elegant movement */
+.float-elegant {
+  animation: float-elegant 12s ease-in-out infinite;
+}
+
+@keyframes float-elegant {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-20px) rotate(1deg);
+  }
+}
+
+/* Float medium - for medium sized elements */
+.float-medium {
+  animation: float-medium 10s ease-in-out infinite;
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(3deg);
+  }
+}
+
+/* Float fast - for smaller elements */
+.float-fast {
+  animation: float-fast 6s ease-in-out infinite;
+}
+
+@keyframes float-fast {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Rotate slow - for rings */
+.rotate-slow {
+  animation: rotate-slow 30s linear infinite;
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Pulse glow for violet elements */
+.pulse-violet {
+  animation: pulse-violet 3s ease-in-out infinite;
+}
+
+@keyframes pulse-violet {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(167, 139, 250, 0.6);
+  }
+}
+
+/* ========================================
+   TEXT ANIMATIONS
+   ======================================== */
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+}
+
+/* Gradient text for violet */
+.gradient-text-violet {
+  background: linear-gradient(135deg, #8B5CF6, #A78BFA, #7C3AED, #8B5CF6);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 4s ease infinite;
+  text-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+/* Animated gradient text classes for tagline */
+@keyframes gradient-text-flow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Violet variant for "Intelligence" */
+.gradient-text-animated-violet {
+  background: linear-gradient(
+    90deg,
+    #8B5CF6 0%,
+    #A78BFA 25%,
+    #C4B5FD 50%,
+    #A78BFA 75%,
+    #8B5CF6 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-text-flow 3s linear infinite;
+}
+
+/* Fuchsia variant for "Innovation" */
+.gradient-text-animated-fuchsia {
+  background: linear-gradient(
+    90deg,
+    #D946EF 0%,
+    #E879F9 25%,
+    #F5D0FE 50%,
+    #E879F9 75%,
+    #D946EF 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-text-flow 3s linear infinite;
+}
+
+/* Cyan variant for "Precision" */
+.gradient-text-animated-cyan {
+  background: linear-gradient(
+    90deg,
+    #06B6D4 0%,
+    #22D3EE 25%,
+    #67E8F9 50%,
+    #22D3EE 75%,
+    #06B6D4 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-text-flow 3s linear infinite;
+}
+
+/* Purple variant for "Performance" */
+.gradient-text-animated-purple {
+  background: linear-gradient(
+    90deg,
+    #9333EA 0%,
+    #A855F7 25%,
+    #D8B4FE 50%,
+    #A855F7 75%,
+    #9333EA 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-text-flow 3s linear infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Fade up animation */
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+/* Staggered fade-up delays */
+.animate-fade-up-delay-1 {
+  animation: fade-up 0.6s ease-out 0.1s forwards;
+  opacity: 0;
+}
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+.animate-fade-up-delay-3 {
+  animation: fade-up 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+.animate-fade-up-delay-4 {
+  animation: fade-up 0.6s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+/* ========================================
+   BORDER & GLOW EFFECTS
+   ======================================== */
+
+/* Violet border beam animation */
+.border-beam-violet {
+  position: relative;
+}
+
+.border-beam-violet::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(90deg, transparent, #8B5CF6, transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: border-beam 4s linear infinite;
+}
+
+@keyframes border-beam {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Ping animation for badge dot */
+@keyframes ping-violet {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping-violet {
+  animation: ping-violet 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--navy-900);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--violet-dark);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--violet);
+}
