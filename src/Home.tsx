@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { Brain, Zap, BarChart3, Shield, TrendingUp, Users, ArrowRight, Sparkles } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import TradingViewWidget from './components/TradingViewWidget';
 
 // Floating elements - AI theme with neural network inspired shapes
 function FloatingElements() {
@@ -255,8 +256,8 @@ const IoMarketsAI: React.FC = () => {
             </p>
           </div>
           <div className="max-w-6xl mx-auto">
-            <div style={{ height: "500px", width: "100%" }}>
-              <div className="h-[500px] bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">Trading Chart Coming Soon</div>
+            <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-200" style={{ height: "500px", width: "100%" }}>
+              <TradingViewWidget />
             </div>
           </div>
         </div>
