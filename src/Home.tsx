@@ -164,21 +164,6 @@ const IoMarketsAI: React.FC = () => {
               <Sparkles className="w-5 h-5 text-[#A78BFA]" />
             </motion.div>
 
-            {/* Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-10 leading-[1.1] tracking-tight"
-            >
-              <span className="relative inline-block">
-                IoMarkets
-                <span className="text-[#A78BFA] text-xl sm:text-2xl lg:text-3xl font-bold align-super ml-1">®</span>
-              </span>
-              {' '}
-              <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">.ai</span>
-            </motion.h1>
-
             {/* Tagline - Two lines with animated gradient bold words */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
